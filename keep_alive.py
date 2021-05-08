@@ -5,11 +5,11 @@ app = Flask('')
 
 @app.route('/')
 def home():
-    return "https://hanelbot.tk"
+    return "Host='0.0.0.0',port=8080"
 
 def run():
   app.run(host='0.0.0.0',port=8080)
 
-def keep_alive():
+def server():
     t = Thread(target=run)
     t.start()
